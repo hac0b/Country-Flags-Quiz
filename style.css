@@ -1,0 +1,131 @@
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #c1c1c1;
+    margin: 0;}
+  
+  .hidden {
+    display: none;}
+  
+  #menu {
+    background-image: url('menu_background.png');
+    background-position: center;  /* keeps image centered */
+    height: 100vh; /* full screen height */
+    padding: 30vh 10vh;
+    box-sizing: border-box; /* include padding inside height */
+    flex-direction: column;
+    color: white;
+    font-size: 5vh;
+    text-shadow: .5vh .5vh 1vh black;}
+
+  #playBtn {
+    padding: .8vh 3vh;
+    font-size: 5vh;
+    cursor: pointer;
+    border: .3vh solid #8f8f8f;
+    border-radius: .8vh;}
+
+#giveUpBtn {
+    background: none;
+    border: none;
+    font-size: 2vh;
+    padding: 0.3vh 1.5vh;
+    cursor: pointer;
+    background-color: #b4bfcf;
+    border: .1vh solid #333;
+    border-radius: .8vh;
+    transition: transform 0.2s;}
+
+  #game {
+    margin-top: 5vh;}
+
+  #flag-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-height: 60vh;
+    overflow: hidden;
+    margin: 5vh 0;}
+      
+  #flag {
+    width: 90vw;
+    height: auto;
+    max-height: 60vh;
+    object-fit: contain;}
+      
+  #guess {
+    width: 45vh;
+    border: .1vh solid #333;
+    border-radius: .8vh;}
+
+  #guess:focus {
+    outline: none;
+    border: 0.3vh solid #333; /* keep same border when focused */
+    box-shadow: none;}        /* remove any glow/expansion */
+
+  #top-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+    font-size: 4vh;}
+
+  #timer-container {
+    display: flex;
+    align-items: center;}
+      
+  #pauseBtn, #replayBtn, #backBtn, #nextBtn {
+    background: none;
+    border: none;
+    font-size: 5vh;
+    cursor: pointer;
+    transition: transform 0.2s;}
+      
+  #pauseBtn:hover, #giveUpBtn:hover, #replayBtn:hover, #backBtn:hover, #nextBtn:hover {
+    transform: scale(1.1);}
+      
+  #bottom-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;}
+
+  #bottom-row input {
+    text-align: center;
+    font-size: 3vh;}
+
+
+#missedFlags {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* fill width */
+  gap: 2vh 2vw;   /* vertical and horizontal spacing */
+  padding: 2vh 2vw;
+}
+
+#missedFlags .flag-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#missedFlags img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border: 0.1vh solid #333;
+  border-radius: 0.5vh;
+}
+
+#returnMenuBtn {
+    position: fixed;
+    font-size: 4vh;
+    padding-left: 3vh;
+    padding-right: 3vh;
+    border-radius: 1vh;
+    top: 5vh;
+    left: 5vh;
+    z-index: 1000;      /* make sure it’s above other elements */
+  }
+  

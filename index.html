@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Country Flags Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="menu">
+    <h1>Country Flags Quiz</h1>
+    <button id="playBtn">Play</button>
+  </div>
+
+  <div id="game" class="hidden">
+    <div id="top-row">
+      <div id="timer">00:00</div>
+      <button id="pauseBtn">⏸️</button>
+      <button id="giveUpBtn" class="menu-btn">Give Up</button>
+      <button id="replayBtn">🔁</button>
+      <div id="progress">0 / 197</div>
+    </div>
+
+    <div id="flag-container">
+      <img id="flag" src="" alt="Country Flag" />
+    </div>
+
+    <div id="bottom-row">
+      <button id="backBtn">⬅️</button>
+      <input type="text" id="guess" placeholder="Type your guess..." autocomplete="off" />
+      <button id="nextBtn">➡️</button>
+    </div>
+  </div>
+
+  <div id="results" class="hidden text-center">
+    <h2 id="resultTitle">You gave up!</h2>
+    <p id="resultStats"></p>
+    <div id="missedFlags" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 p-4"></div>
+    <button id="returnMenuBtn" class="menu-btn mt-4">Return to Menu</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
